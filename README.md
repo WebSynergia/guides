@@ -1,3 +1,5 @@
+![websynergis](http://websynergia.com.pl/images/logo_websynergia.jpg)
+
 WebSynergia developer's guides
 ======
 
