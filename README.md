@@ -45,7 +45,6 @@ Remember about synchronizing often with remote branch:
 ```
 git fetch remote
 git rebase remote/staging
- 
 ```
  
 Some conflicts may happen, the more frequently you pull changes, the less problematic it will be. Prefer splitting big features into smaller chunks with frequent commits.  If you are done, stage and commit changes:
@@ -53,7 +52,6 @@ Some conflicts may happen, the more frequently you pull changes, the less proble
 ```
 git add --all
 git commit --a
- 
 ```
  
 Remember about running tests before commiting. We use Gitlab CI for continuous integration and after each commit the runner is running tests but just to keep things clean it's better to ensure all tests pass.
@@ -61,13 +59,11 @@ Remember about running tests before commiting. We use Gitlab CI for continuous i
 Provide descriptive commit message. Avoid short one-line statements like “User CRUD”, rather write a short summary, some longer description and maybe add a link to project management system where the feature was discussed:
  
 ```
- 
 Implement creating subtasks
  
 This feature gives ability to create subtasks that belong to the parent task along with draggable interface – now it is easy to change the sequence of the tasks and assign them to the other parent task or project.
  
 The feature was discussed at: basecamp/trello/whatever link.
- 
 ```
  
 Prefer present tense in summary over the past – it will be more consistent with Git’s convention (e.g. when reverting commits or merging branches).
@@ -78,7 +74,6 @@ Push your feature branch to Gitlab repo:
  
 ```
 git push remote my-awesome-feature-branch
- 
 ```
  
 And ask other developer(s) for code review before merging. We use Gitlab specific workflow. Get familiar with some useful hooks, like special commit messages for solving issues. Gitlab created awesome tutorial about workflow: http://www.youtube.com/watch?v=raXvuwet78M, it provides most of the information needed when working with Gitlab.
@@ -156,8 +151,7 @@ Formatting
 
 first_method
   .second_method
-  .another_method
- 
+  .another_method 
 ```
  
 Ruby
@@ -196,7 +190,6 @@ attr_reader :user, :article
 #over this one
 attr_reader :user
 attr_reader :article
-
 ``` 
  
 * Prefer composition over inheritance
@@ -229,7 +222,6 @@ class AnotherClass < SomeClass
    end
  
 end
-
 ```
  
 * When passing options as argument, always use Hash#fetch method (even if you expect something to be nil, avoid #[], make  nil the default value instead)
