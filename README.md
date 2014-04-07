@@ -328,10 +328,9 @@ Javascript / Coffesscript
 License
 -------
 
-Guides © 2014 WebSynergia, inc.
+Guides © 2014 WebSynergia
 
-The content is distributed under the [Creative Commons
-Attribution License](http://creativecommons.org/licenses/by/3.0/).
+The content is distributed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/).
  
 
 
