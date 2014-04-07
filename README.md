@@ -330,6 +330,8 @@ License
 
 Guides © 2014 WebSynergia
 
+![websynergis](http://websynergia.com.pl/images/logo_websynergia.jpg)
+
 The content is distributed under the [Creative Commons Attribution License](http://creativecommons.org/licenses/by/3.0/).
  
 
