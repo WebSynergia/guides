@@ -23,7 +23,7 @@ Some basic rules:
 * Squash commits with trivial changes like “margin change in admin page”
 * Get familiar with Gitlab (https://www.gitlab.com) as it’s our primary collaboration tool
  
-Protocol
+### Protocol
  
 Staging is in most cases the default branch. Master is for production ready commits and hot fixes, don’t commit anything directly in master.
  
@@ -131,7 +131,7 @@ When needed (big applications under heavy traffic), we switch from MRI Ruby to J
 Style
 -------
  
-Formatting
+### Formatting
  
 * Avoid using spaces after (, [ and before ), ]
 * Delete trailing whitespaces
@@ -156,13 +156,12 @@ first_method
   .another_method 
 ```
  
-Ruby
+### Ruby
  
 * Avoid semicolons
 * Avoid ternary operators – prefer multiline conditionals
 * Don’t use explicit returns unless necessary (like early return)
 * Avoid semicolons
-* Write bang (!) methods only if they raise exception(s)
 * Don’t use explicit self except defining class-level methods and assigning attributes
 * Prefer writing class methods like def self.class_method, not within class << self
 * Avoid parentheses for functions/methods without arguments (exception: super(), which calls method without arguments in that case)
@@ -172,6 +171,9 @@ Ruby
 * Prefer question mark (?) for methods’ names returning boolean over containing is (valid? over is_valid)
 * Make methods private unless it needs to be public
 * Prever new Ruby (since 1.9) hash syntax over hash rockets
+* Prefer if ! over unless
+* Don’t use unless...else
+* Don’t use double negations (unless .blank?)
 * Avoid using instance variables directly – use attribute readers / writers and make these methods private unless it is necessary to make them public, e.g.
  
 ``` ruby
@@ -248,7 +250,7 @@ Rails
 -------
  
 * When creating new app, use our Rails App Creation Kit
-* Use Guard and Spork when testing
+* Use Guard when testing (and Spork or Spring to make execution faster)
 * Avoid using #try method, use delegate macro from ActiveSupport instead
 * Avoid conditional validations and callbacks
 * Limit application of ActiveRecord callbacks to: data formatting (like removing whitespaces before persistence), parameterizing (e.g. creating parameterized_name from name) and statistics calculations (number of records in has_many associations like houses amount in investments or prices range in investment’s apartments) purposes or some database-specific actions (like refreshing materialized views), the use case / service object is probably a better solution
@@ -280,14 +282,12 @@ Rails
 * Add some app-specific actions needed to run to Readme (like custom rake tasks)
 * Get Errbit API key for error tracking 
 * More about separation of concerns, structuring app etc. : http://karolgalanciak.com/blog/2013/10/06/structuring-rails-applications/ 
-* Prefer if ! over unless
-* Don’t use unless...else
-* Don’t use double negations (unless .blank?)
+* Write bang (!) methods only if raise exception(s) 
 
 Testing
 -------
  
-* Use the following stack: RSpec + Guard + Spork (MRI Ruby only) + Capybara + Poltergeist + Database Cleaner + FactoryGirl (Ruby), Jasmine (Javascript)
+* Use the following stack: RSpec + Guard + Spork/Spring(MRI Ruby only) / Theine(JRuby Only) + Capybara + Poltergeist + Database Cleaner + FactoryGirl (Ruby), Jasmine (Javascript)
 * Avoid using instance variables in tests, use let and subject instead
 * Use feature/scenario methods from Capybara
 * Use one factories.rb file per project
