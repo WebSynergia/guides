@@ -249,7 +249,7 @@ end
 Rails
 -------
  
-* When creating new app, use our Rails App Creation Kit
+* When creating new app, use our Rails App Starter Kit (https://github.com/WebSynergia/rails_app_starter_kit)
 * Use Guard when testing (and Spork or Spring to make execution faster)
 * Avoid using #try method, use delegate macro from ActiveSupport instead
 * Avoid conditional validations and callbacks
